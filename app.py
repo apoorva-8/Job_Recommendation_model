@@ -9,7 +9,8 @@ with open("rf_classifier_job_recommendation.pkl"), "rb" as file:
     rf_classifier = pickle.load(file)
 
 # Load the job recommendation vectorizer
-with open("tfidf_vectorizer_job_recommendation.pkl"), "rb" as file:
+with open("rf_classifier_job_recommendation.pkl", "rb") as file:
+    
     job_vectorizer = pickle.load(file)
 
 @app.route('/')
