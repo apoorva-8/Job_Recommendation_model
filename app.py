@@ -5,12 +5,12 @@ import os
 app = Flask(__name__)
 
 # Load classifier and its vectorizer
-with open("rf_classifier_job_recommendation.pkl"), "rb" as file:
+with open("rf_classifier_job_recommendation.pkl", "rb") as file:
     rf_classifier = pickle.load(file)
 
 # Load the job recommendation vectorizer
 with open("rf_classifier_job_recommendation.pkl", "rb") as file:
-    
+
     job_vectorizer = pickle.load(file)
 
 @app.route('/')
